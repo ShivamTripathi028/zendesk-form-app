@@ -177,7 +177,7 @@ const handler: Handler = async (
   const zendeskApiUrl = `https://${zendeskSubdomain}.zendesk.com/api/v2/tickets.json`;
   const zendeskTicketData = {
     ticket: {
-      subject: `RAK IoT Requirements Inquiry from ${name}`,
+      subject: `RAK Inquiry from ${name}`,
       comment: { html_body: message },
       requester: { name: name, email: email },
       // assignee_id: parseInt(zendeskAssigneeId, 10) || null,
