@@ -1,0 +1,27 @@
+# netlify.toml
+
+[build]
+  # Command to build your frontend application (Vite uses 'npm run build')
+  command = "npm run build"
+
+  # Directory containing the serverless functions
+  # We'll create this folder next
+  functions = "netlify/functions"
+
+  # Directory where the built frontend assets are output (Vite default is 'dist')
+  publish = "dist"
+
+# Redirect rule to make the frontend app handle routing correctly (for SPAs)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Development server settings (optional but useful for local testing)
+[dev]
+  # Port for the local Netlify dev server
+  port = 8888
+  # Automatically opens the browser
+  autoLaunch = true
+  # Framework detection hint (helps Netlify Dev serve Vite correctly)
+  framework = "#vite"
