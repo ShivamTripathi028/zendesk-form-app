@@ -24,4 +24,6 @@
   # Automatically opens the browser
   autoLaunch = true
   # Framework detection hint (helps Netlify Dev serve Vite correctly)
-  framework = "#vite"
+  framework = "vite"
+  # Tell Netlify Dev which port Vite is running on
+  targetPort = 8080 
